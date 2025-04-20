@@ -1,8 +1,6 @@
 <?php
  include './connection/conn.php';
- if(isset($_POST['logout'])){
-    echo 'Successsfully Logged Out';
-    header('location:indx.php');
-    exit();
- }
+ session_distroy();
+$_SESSION['username'] ='';
+header("location:indx.php");
 ?>
